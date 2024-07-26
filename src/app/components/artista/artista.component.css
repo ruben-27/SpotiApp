@@ -1,0 +1,54 @@
+.row > div{
+  display: table-cell !important;
+  text-align: center;
+  vertical-align: middle !important;
+  padding: 10px 0px;
+  margin: 5px 0px;
+}
+
+.col > .row:hover{
+  background-color: #373a3b;
+  border-radius: 5px;
+}
+
+.bg-spoti{
+  background-color: #1dd35e;
+  color: #181a1b;
+  border-radius: 5px;
+  border: none;
+  padding: 10px 15px;
+}
+
+.bg-spoti:hover{
+  background-color: #18b14f;
+}
+
+a{
+  text-decoration: none;
+  color: #1dd35e;
+}
+
+a:hover{
+  color: gray;
+}
+
+#cabecera{
+  height: 40vh;
+  background-repeat: no-repeat !important;
+  background-attachment: fixed !important;
+  background-position: center !important;
+  background-size: cover !important;
+}
+
+#imgPerfil{
+  position: relative;
+  top: -30%;
+}
+
+@media screen and (max-width: 991px) {
+
+  #cabecera{
+    height: 20vh;
+  }
+
+}

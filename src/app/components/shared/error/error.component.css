@@ -1,0 +1,11 @@
+button{
+  position: absolute;
+  top: 35%;
+  right: 2%;
+}
+
+@media screen and (max-width: 500px){
+  button{
+    position: relative;
+  }
+}

@@ -1,0 +1,24 @@
+<!--ERROR-->
+<app-error *ngIf="error"></app-error>
+<!--LOADING-->
+<app-loading *ngIf="loading"></app-loading>
+<!--CANCIONES-->
+<div class="container md-5">
+  <div class="row ">
+    <div class="col-12 col-md-4 col-lg-3 p-2" *ngFor="let cancion of nuevasCanciones">
+      <div class="card h-100 shadow bg-dark">
+        <button class="btn rounded-circle bg-spoti">
+          <i class="fa fa-play" aria-hidden="true"></i>
+        </button>
+        <img [src]="cancion.images[1].url" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title text-light">{{ cancion.name }}</h5>
+          <small class="text-muted">{{ cancion.release_date | date }}</small>
+        </div>
+        <div class="card-footer">
+          <span class="badge rounded-pill bg-spoti ms-0 me-1 puntero" (click)="verArtista(cancion.artists[i].id)" *ngFor="let artista of cancion.artists; let i = index">{{artista.name}}</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,5 @@
+<div class="alert alert-danger mt-2 mb-2 ms-5 me-5">
+  <h4>Error</h4>
+  <p>{{ mensajeError }}</p>
+  <button type="button" class="btn btn-outline-success"  *ngIf="tokenError" (click)="nuevoToken()">Generar nuevo token</button>
+</div>

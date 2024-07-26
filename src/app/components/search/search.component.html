@@ -1,0 +1,28 @@
+<!--ERROR-->
+<app-error *ngIf="error && control"></app-error>
+
+<div class="container">
+  <!--BUSCADOR-->
+  <div class="row">
+    <div class="col mt-3 mb-3 ms-5 me-5">
+      <input #termino type="text" (keyup)="buscar(termino.value)" class="form-control" placeholder="Buscar artista..." />
+    </div>
+  </div>
+  <!--TARJETAS-->
+  <div class="row puntero " >
+    <div class="col-12 col-md-4 col-lg-3 p-2" *ngFor="let artista of artistas ">
+      <div class="card h-100 shadow bg-dark" (click)="verArtista(artista)">
+        <img [src]="artista.images | noImages : 1" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title text-light">{{ artista.name }}</h5>
+          <small class="text-muted">{{ artista.release_date | date }}</small>
+        </div>
+        <div class="card-footer">
+          <span class="badge rounded-pill bg-spoti ms-0 me-1"></span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+

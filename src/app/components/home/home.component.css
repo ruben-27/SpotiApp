@@ -1,0 +1,45 @@
+.bg-spoti{
+  background-color: #1dd35e;
+  color: #181a1b;
+  font-weight: normal!important;
+}
+
+.card:hover{
+  box-shadow: 0 1rem 3rem rgba(0,0,0,.175) !important;
+}
+
+.card > button{
+  position: absolute;
+  right: 5%;
+  bottom: 35%;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.3s 0s;
+}
+
+.card:hover > button{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.card > button:hover,
+.card > .card-footer > span:hover{
+  background-color: #18b14f;
+}
+
+.card > button > .fa{
+  margin-left: 3px;
+}
+
+@media screen and (max-width: 810px){
+  .card > button{
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 767px){
+  .card > button{
+    bottom: 10%;
+  }
+}
